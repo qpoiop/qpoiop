@@ -1,20 +1,20 @@
-<svg width="700" height="175" viewBox="0 0 700 175" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<svg width="700" height="300" viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
   <defs>
     <!-- 양각 효과 필터 (Raised) -->
     <filter id="neumorphism-text-raised" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#222222" flood-opacity="0.5"/>
-      <feDropShadow dx="-2" dy="-2" stdDeviation="4" flood-color="#888888" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#444444" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="4" flood-color="#f8f8f8" flood-opacity="0.5"/>
     </filter>
     
     <!-- 음각 효과 필터 (Inset/Engraved) -->
     <filter id="neumorphism-text-inset" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#222222" flood-opacity="0.5"/>
-      <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#888888" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="4" flood-color="#444444" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#888888" flood-opacity="0.5"/>
     </filter>
     
     Claymorphism Filter for Background Container
     <filter id="neomorph-bg" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="-5" dy="-5" stdDeviation="5" flood-color="#888888" flood-opacity="0.3"/>
+      <feDropShadow dx="-5" dy="-5" stdDeviation="5" flood-color="#f8f8f8" flood-opacity="0.3"/>
       <feDropShadow dx="15" dy="20" stdDeviation="10" flood-color="#000000" flood-opacity="0.3"/>
       
       <!-- 안쪽 영역 추출 -->
@@ -38,7 +38,7 @@
         transform: translateY(0);
       }
       50% {
-        transform: translateY(-3px);
+        transform: translateY(-5px);
       }
     }
     
@@ -65,6 +65,16 @@
       filter: url(#neumorphism-text-raised);
       cursor: default;
     }
+
+    .word-raised.accent {
+      animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite,
+                 raisedOpacity 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      filter: url(#neumorphism-text-raised);
+      cursor: default;
+      font-size: 35px;
+      font-weight: 900;
+      fill: #19161f;
+    }
     
     .word-static {
       fill: #212830;  /* Same as background */
@@ -72,39 +82,39 @@
       cursor: default;
     }
     
-    .w-1 { animation-delay: 0s; }
-    .w-2 { animation-delay: 0.5s; }
-    .w-3 { animation-delay: 0.7s; }
-    .w-4 { animation-delay: 1s; }
-    .w-5 { animation-delay: 1.5s; }
-    .w-6 { animation-delay: 1.7s; }
+    .w-1 { animation-delay: 0; }
+    .w-2 { animation-delay: 0; }
+    .w-3 { animation-delay: 0.2s; }
+    .w-4 { animation-delay: 0.5s; }
+    .w-5 { animation-delay: 0.8s; }
+    .w-6 { animation-delay: 0.8s; }
   </style>
 
   <!-- Background -->
   <rect width="700px" height="100%" fill="#212830" />
   
   <!-- Neumorphism Container Background -->
-  <rect x="29" y="15" width="642" height="146" rx="12" ry="12" fill="#212830" filter="url(#neomorph-bg)" />
+  <rect x="29" y="35" width="642" height="220" rx="12" ry="12" fill="#212830" filter="url(#neomorph-bg)" />
   
   <g class="container" transform="translate(350, 87.5)">
     <!-- 위쪽 줄 - 평지 레이어 (기본) -->
-    <text class="word-base w-1" x="-146" y="-18">Undefined</text>
-    <text class="word-base w-2" x="-41" y="-18">Is</text>
-    <text class="word-base w-3" x="6" y="-18">Not</text>
-    <text class="word-base w-4" x="53" y="-18">A</text>
-    <text class="word-base w-5" x="146" y="-18">Function</text>
-    <text class="word-base w-6" x="228" y="-18">.</text>
+    <text class="word-static w-1" x="-80" y="20">Uncaught</text>
+    <text class="word-static w-2" x="100" y="20">TypeError :</text>
+    <text class="word-base w-3 accent" x="-120" y="80">Beyond</text>
+    <text class="word-base w-4" x="-20" y="80">a</text>
+    <text class="word-base w-5" x="50" y="80">Single</text>
+    <text class="word-base w-6" x="160" y="80">type</text>
     
     <!-- 위쪽 줄 - 양각 레이어 (opacity로 전환) -->
-    <text class="word-raised w-1" x="-146" y="-18">Undefined</text>
-    <text class="word-raised w-2" x="-41" y="-18">Is</text>
-    <text class="word-raised w-3" x="6" y="-18">Not</text>
-    <text class="word-raised w-4" x="53" y="-18">A</text>
-    <text class="word-raised w-5" x="146" y="-18">Function</text>
-    <text class="word-raised w-6" x="228" y="-18">.</text>
+    <text class="word-static w-1" x="-80" y="20">Uncaught</text>
+    <text class="word-static w-2" x="100" y="20">TypeError :</text>
+    <text class="word-raised w-3 accent" x="-120" y="80">Beyond</text>
+    <text class="word-raised w-4" x="-20" y="80">a</text>
+    <text class="word-raised w-5" x="50" y="80">single</text>
+    <text class="word-raised w-6" x="160" y="80">type !</text>
     
     <!-- 아래쪽 줄 - QPOIOP 음각 (애니메이션 없음) -->
-    <text class="word-static" x="0" y="41" font-size="23px">QPOIOP</text>
+    <text class="word-static" x="0" y="150" font-size="23px">QPOIOP</text>
   </g>
 
 </svg>
