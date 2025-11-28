@@ -1,11 +1,10 @@
 <table width="100%">
 <tr>
-<td colspan="2" align="center">
-<img src="assets/header_slogan.svg" alt="Undefined Is Not A Function" width="700" />
+<td  align="center">
+<img src="assets/header_slogan.svg" alt="Undefined Is Not A Function" width="400" />
 </td>
-</tr>
-<tr>
-<td colspan="2" align="center">
+
+<td align="center">
 <p><b>Web Developer</b></p>
 <p><b>Interest</b></p>
 • 3D Visualization<br>

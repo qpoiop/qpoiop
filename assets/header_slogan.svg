@@ -1,5 +1,14 @@
-<svg width="700" height="300" viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
   <defs>
+    <filter id="neomorph-fbg" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- 외곽 흰색 그라데이션 효과 - 여러 레이어로 부드러운 그라데이션 생성 -->
+      <feDropShadow dx="0" dy="0" stdDeviation="100" flood-color="#ffffff" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="80" flood-color="#ffffff" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="60" flood-color="#ffffff" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="40" flood-color="#ffffff" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#ffffff" flood-opacity="0.2"/>
+    </filter>
+    
     <!-- 양각 효과 필터 (Raised) -->
     <filter id="neumorphism-text-raised" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#444444" flood-opacity="0.5"/>
@@ -9,13 +18,13 @@
     <!-- 음각 효과 필터 (Inset/Engraved) -->
     <filter id="neumorphism-text-inset" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="-2" dy="-2" stdDeviation="4" flood-color="#444444" flood-opacity="0.5"/>
-      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#888888" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#f8f8f8" flood-opacity="0.5"/>
     </filter>
     
     Claymorphism Filter for Background Container
     <filter id="neomorph-bg" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="-5" dy="-5" stdDeviation="5" flood-color="#f8f8f8" flood-opacity="0.3"/>
-      <feDropShadow dx="15" dy="20" stdDeviation="10" flood-color="#000000" flood-opacity="0.3"/>
+      <feDropShadow dx="-5" dy="-5" stdDeviation="10" flood-color="#ffffff" flood-opacity="0.3"/>
+      <feDropShadow dx="5" dy="5" stdDeviation="10" flood-color="#444444" flood-opacity="0.3"/>
       
       <!-- 안쪽 영역 추출 -->
       <!-- <feMorphology operator="erode" radius="30" in="SourceAlpha" result="eroded"/> -->
@@ -27,7 +36,7 @@
     .container {
       font-family: Arial, sans-serif;
       font-weight: bold;
-      font-size: 35px;
+      font-size: 30px;
       text-anchor: middle;
       dominant-baseline: middle;
     }
@@ -54,67 +63,53 @@
 
     .word-base {
       animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-      fill: #212830;  /* Same as background */
+      fill: #ebe6df;  /* Same as background */
       cursor: default;
     }
     
     .word-raised {
       animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite,
                  raisedOpacity 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-      fill: #212830;  /* Same as background */
+      fill: #ebe6df;  /* Same as background */
       filter: url(#neumorphism-text-raised);
       cursor: default;
-    }
-
-    .word-raised.accent {
-      animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite,
-                 raisedOpacity 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-      filter: url(#neumorphism-text-raised);
-      cursor: default;
-      font-size: 35px;
-      font-weight: 900;
-      fill: #19161f;
     }
     
     .word-static {
-      fill: #212830;  /* Same as background */
+      fill: #ebe6df;  /* Same as background */
       filter: url(#neumorphism-text-inset);
       cursor: default;
     }
     
-    .w-1 { animation-delay: 0; }
-    .w-2 { animation-delay: 0; }
-    .w-3 { animation-delay: 0.2s; }
+    .w-1 { animation-delay: 0.1s; }
+    .w-2 { animation-delay: 0.2s; }
+    .w-3 { animation-delay: 0.4s; }
     .w-4 { animation-delay: 0.5s; }
     .w-5 { animation-delay: 0.8s; }
-    .w-6 { animation-delay: 0.8s; }
   </style>
 
   <!-- Background -->
-  <rect width="700px" height="100%" fill="#212830" />
+  <rect width="400px" height="250px" fill="#ebe6df" filter="url(#neomorph-fbg)" />
   
   <!-- Neumorphism Container Background -->
-  <rect x="29" y="35" width="642" height="220" rx="12" ry="12" fill="#212830" filter="url(#neomorph-bg)" />
+  <rect x="30" y="30" width="340" height="190" rx="12" ry="12" fill="#ebe6df" filter="url(#neomorph-bg)" />
   
   <g class="container" transform="translate(350, 87.5)">
     <!-- 위쪽 줄 - 평지 레이어 (기본) -->
-    <text class="word-static w-1" x="-80" y="20">Uncaught</text>
-    <text class="word-static w-2" x="100" y="20">TypeError :</text>
-    <text class="word-base w-3 accent" x="-120" y="80">Beyond</text>
-    <text class="word-base w-4" x="-20" y="80">a</text>
-    <text class="word-base w-5" x="50" y="80">Single</text>
-    <text class="word-base w-6" x="160" y="80">type</text>
+    <!-- <text class="word-base w-1" x="-20" y="0">Uncaught</text>
+    <text class="word-base w-2" x="-150" y="0">TypeError</text>
+    <text class="word-base w-3" x="-150" y="60"></text> -->
+    <text class="word-base w-4" x="-140" y="0">Beyond</text>
+    <text class="word-base w-5" x="-140" y="40">a single type!</text>
     
     <!-- 위쪽 줄 - 양각 레이어 (opacity로 전환) -->
-    <text class="word-static w-1" x="-80" y="20">Uncaught</text>
-    <text class="word-static w-2" x="100" y="20">TypeError :</text>
-    <text class="word-raised w-3 accent" x="-120" y="80">Beyond</text>
-    <text class="word-raised w-4" x="-20" y="80">a</text>
-    <text class="word-raised w-5" x="50" y="80">single</text>
-    <text class="word-raised w-6" x="160" y="80">type !</text>
-    
+    <!-- <text class="word-raised w-1" x="-230" y="0">Uncaught</text>
+    <text class="word-raised w-2" x="-80" y="0">TypeError</text>
+    <text class="word-raised w-3" x="-140" y="40"></text> -->
+    <text class="word-raised w-4" x="-140" y="0">Beyond</text>
+    <text class="word-raised w-5" x="-140" y="40">a single type!</text>
     <!-- 아래쪽 줄 - QPOIOP 음각 (애니메이션 없음) -->
-    <text class="word-static" x="0" y="150" font-size="23px">QPOIOP</text>
+    <text class="word-static" x="-140" y="100" font-size="20px">QPOIOP</text>
   </g>
 
 </svg>
