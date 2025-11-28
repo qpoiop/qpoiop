@@ -1,37 +1,30 @@
-<div style="background: linear-gradient(180deg, #e0e0e0 0%, #e0e0e0 25%, #d8d8d8 30%, #d0d0d0 40%, #c8c8c8 50%, #c0c0c0 60%, #b0b0b0 70%, #a0a0a0 80%, #808080 85%, #606060 90%, #404040 94%, #202020 97%, #000000 100%); padding: 0; margin: 0;">
-<div align="center" style="padding: 20px;">
-<img src="assets/header_slogan.svg" alt="Undefined Is Not A Function" style="width: 100%; height: auto; max-width: 100%; display: block;" />
-</div>
-
-<div align="center" style="padding: 20px;">
-<div style="background: #2a313c; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-<h2 style="margin: 0 0 8px 0; font-size: 26px; font-weight: 700; color: #ffffff; font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;"></h2>
-<p style="margin: 0 0 16px 0; font-size: 14px; color: #cccccc; font-weight: 500; font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;">Web Developer</p>
-
-<div style="margin-bottom: 16px;">
-<h3 style="margin: 0 0 8px 0; font-size: 10px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.2px; font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">Interest</h3>
-<div style="font-size: 13px; color: #cccccc; line-height: 1.8; font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;">
-<div style="margin-bottom: 4px; font-weight: 500;">• 3D Visualization</div>
-<div style="margin-bottom: 4px; font-weight: 500;">• Media Tech</div>
-<div style="margin-bottom: 4px; font-weight: 500;">• Web Interaction</div>
-<div style="margin-bottom: 4px; font-weight: 500;">• Finding balance with over-engineering</div>
-<div style="margin-bottom: 0; font-weight: 500;">• Scalable common structure vs. practicality</div>
-</div>
-</div>
-</div>
-</div>
-
-<div align="center" style="padding: 20px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-<div style="background: #2a313c; padding: 15px; border-radius: 15px; flex: 1; min-width: 300px; max-width: 500px;">
-<img src="https://github-readme-stats.vercel.app/api?username=qpoiop&show_icons=true&theme=radical&hide_border=true&bg_color=2a313c&title_color=ffffff&icon_color=ffffff&text_color=ffffff" alt="GitHub Stats" width="100%" style="border-radius: 10px; display: block;" />
-</div>
-<div style="background: #2a313c; padding: 15px; border-radius: 15px; flex: 1; min-width: 300px; max-width: 500px;">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qpoiop&layout=compact&theme=radical&hide_border=true&bg_color=2a313c&title_color=ffffff&icon_color=ffffff&text_color=ffffff" alt="Top Languages" width="100%" style="border-radius: 10px; display: block;" />
-</div>
-</div>
-
-<div align="center" style="padding: 20px;">
-<div style="margin-bottom: 20px;">
+<table width="100%">
+<tr>
+<td colspan="2" align="center">
+<img src="assets/header_slogan.svg" alt="Undefined Is Not A Function" width="700" />
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<p><b>Web Developer</b></p>
+<p><b>Interest</b></p>
+• 3D Visualization<br>
+• Media Tech<br>
+• Web Interaction<br>
+• Finding balance with over-engineering<br>
+• Scalable common structure vs. practicality
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<img src="https://github-readme-stats.vercel.app/api?username=qpoiop&show_icons=true&theme=radical&hide_border=true&bg_color=212830&title_color=D1D7E0&icon_color=D1D7E0&text_color=D1D7E0" alt="GitHub Stats" />
+</td>
+<td align="center" width="50%">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qpoiop&layout=compact&theme=radical&hide_border=true&bg_color=212830&title_color=D1D7E0&icon_color=D1D7E0&text_color=D1D7E0" alt="Top Languages" />
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
 <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
 <img src="https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white" alt="WebGL" />
 <img src="https://img.shields.io/badge/React%20Three%20Fiber-000000?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Three Fiber" />
@@ -57,19 +50,6 @@
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" />
-</div>
-</div>
-
-<div align="center" style="padding: 20px;">
-<div style="padding-bottom: 20px;">
-<h2 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 38px; color: #ffffff; text-align: center; margin: 0;">CONNECT</h2>
-</div>
-<div style="padding-top: 20px;">
-<a href="https://github.com/qpoiop" style="display: inline-block;">
-<svg width="32" height="32" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-</svg>
-</a>
-</div>
-</div>
-</div>
+</td>
+</tr>
+</table>
