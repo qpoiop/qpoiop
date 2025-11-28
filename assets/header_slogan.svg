@@ -2,26 +2,24 @@
   <defs>
     <!-- 양각 효과 필터 (Raised) -->
     <filter id="neumorphism-text-raised" x="-50%" y="-50%" width="200%" height="200%">
-      <!-- 어두운 그림자 (오른쪽 하단) -->
-      <feDropShadow dx="4" dy="4" stdDeviation="5" flood-color="#bebebe" flood-opacity="1"/>
-      <!-- 밝은 그림자 (왼쪽 상단) -->
-      <feDropShadow dx="-4" dy="-4" stdDeviation="5" flood-color="#ffffff" flood-opacity="1"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#222222" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="4" flood-color="#888888" flood-opacity="0.5"/>
     </filter>
     
     <!-- 음각 효과 필터 (Inset/Engraved) -->
     <filter id="neumorphism-text-inset" x="-50%" y="-50%" width="200%" height="200%">
-      <!-- 어두운 그림자 (왼쪽 상단) - 음각 -->
-      <feDropShadow dx="-4" dy="-4" stdDeviation="5" flood-color="#bebebe" flood-opacity="1"/>
-      <!-- 밝은 그림자 (오른쪽 하단) - 음각 -->
-      <feDropShadow dx="4" dy="4" stdDeviation="5" flood-color="#ffffff" flood-opacity="1"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#222222" flood-opacity="0.5"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#888888" flood-opacity="0.5"/>
     </filter>
     
-    <!-- Neumorphism Filter for Background Container -->
+    Claymorphism Filter for Background Container
     <filter id="neomorph-bg" x="-50%" y="-50%" width="200%" height="200%">
-      <!-- Dark shadow (bottom-right) -->
-      <feDropShadow dx="10" dy="10" stdDeviation="15" flood-color="#bebebe" flood-opacity="1"/>
-      <!-- Light shadow (top-left) -->
-      <feDropShadow dx="-10" dy="-10" stdDeviation="15" flood-color="#ffffff" flood-opacity="1"/>
+      <feDropShadow dx="-10" dy="-15" stdDeviation="10" flood-color="#888888" flood-opacity="0.3"/>
+      <feDropShadow dx="15" dy="25" stdDeviation="10" flood-color="#000000" flood-opacity="0.3"/>
+      
+      <!-- 안쪽 영역 추출 -->
+      <!-- <feMorphology operator="erode" radius="30" in="SourceAlpha" result="eroded"/> -->
+      <!-- <feComposite in="eroded" in2="SourceAlpha" operator="in" result="inner-area"/> -->
     </filter>
   </defs>
 
@@ -56,20 +54,20 @@
 
     .word-base {
       animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-      fill: #e0e0e0;  /* Same as background */
+      fill: #2a313c;  /* Same as background */
       cursor: default;
     }
     
     .word-raised {
       animation: riseTransform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite,
                  raisedOpacity 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-      fill: #e0e0e0;  /* Same as background */
+      fill: #2a313c;  /* Same as background */
       filter: url(#neumorphism-text-raised);
       cursor: default;
     }
     
     .word-static {
-      fill: #e0e0e0;  /* Same as background */
+      fill: #2a313c;  /* Same as background */
       filter: url(#neumorphism-text-inset);
       cursor: default;
     }
@@ -83,10 +81,10 @@
   </style>
 
   <!-- Background -->
-  <rect width="100%" height="100%" fill="#e0e0e0" />
+  <rect width="100%" height="100%" fill="#2a313c" />
   
   <!-- Neumorphism Container Background -->
-  <rect x="50" y="25" width="1100" height="250" rx="20" ry="20" fill="#e0e0e0" filter="url(#neomorph-bg)" />
+  <rect x="50" y="25" width="1100" height="250" rx="20" ry="20" fill="#2a313c" filter="url(#neomorph-bg)" />
   
   <g class="container" transform="translate(600, 150)">
     <!-- 위쪽 줄 - 평지 레이어 (기본) -->
